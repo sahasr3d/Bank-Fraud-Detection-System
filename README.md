@@ -6,7 +6,7 @@ The system is designed to simulate practical fraud detection workflows used in m
 
 The project aims to support experimentation with multiple fraud detection models while providing an expandable foundation for future enterprise-grade fraud monitoring systems and intelligent financial analytics.
 
-> ⚠️ **Project Status:** The Bank Transaction Fraud Detection System is currently under active development and is not yet in its final production stage. Core preprocessing pipelines, dataset handling, dashboard foundations, and initial fraud prediction workflows are implemented, while advanced model optimization, real-time transaction monitoring, database integrations, and intelligent fraud analysis features are still being expanded and refined.
+> **Project Status:** The Bank Transaction Fraud Detection System is currently under active development and is not yet in its final production stage. Core preprocessing pipelines, dataset handling, dashboard foundations, and initial fraud prediction workflows are implemented, while advanced model optimization, real-time transaction monitoring, database integrations, and intelligent fraud analysis features are still being expanded and refined.
 
 ## Technologies Used
 
