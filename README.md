@@ -5,6 +5,81 @@ Production-oriented Machine Learning project for detecting fraudulent banking an
 Built using Python, pandas, scikit-learn, XGBoost, SMOTE, Streamlit, and MySQL, this system analyzes transaction behavior to identify suspicious activity with high precision and recall.
 
 ---
+Add this section after the introduction or before “Features”:
+
+---
+
+# 🚧 Development Status
+
+> ⚠️ **Project Status:** This project is currently under active development and is **not yet in its final production stage**.
+
+The current implementation focuses on:
+
+* fraud detection pipeline architecture
+* preprocessing workflows
+* imbalance handling systems
+* baseline and ensemble ML models
+* analytics dashboard infrastructure
+
+Several advanced capabilities are still being developed, optimized, and integrated for real-world scalability and production deployment.
+
+---
+
+# ✅ Currently Implemented
+
+* Data preprocessing pipeline
+* Missing value handling
+* Duplicate removal
+* Feature engineering
+* Stratified train-test splitting
+* SMOTE integration
+* Logistic Regression baseline
+* Random Forest integration
+* XGBoost training pipeline
+* Streamlit dashboard foundation
+* Fraud prediction workflow
+* Evaluation metrics system
+
+---
+
+# 🚧 In Progress
+
+* Hyperparameter tuning
+* Advanced feature engineering
+* Real-time transaction prediction
+* Interactive analytics visualizations
+* Model comparison dashboard
+* Automated anomaly detection
+* Secure authentication system
+* API integration layer
+
+---
+
+# 🔮 Planned Features
+
+* Deep learning fraud detection
+* Graph-based anomaly detection
+* Kafka streaming pipelines
+* FastAPI deployment
+* Docker containerization
+* Cloud deployment (AWS/GCP/Azure)
+* Real-time fraud monitoring
+* Explainable AI (XAI) dashboards
+* Ensemble model optimization
+* Fraud risk scoring engine
+
+---
+
+# 🏗️ Project Vision
+
+The long-term goal of this project is to evolve into a scalable intelligent fraud analytics platform capable of:
+
+* processing large-scale transaction streams,
+* detecting suspicious behavior in real time,
+* minimizing false positives,
+* improving financial security,
+* and supporting production-grade fraud prevention workflows used in modern fintech systems.
+
 
 # 🚀 Features
 
