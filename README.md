@@ -1,236 +1,113 @@
-# 💳 Bank Transaction Fraud Detection System
+# Bank Transaction Fraud Detection System
 
-Production-oriented Machine Learning project for detecting fraudulent banking and credit-card transactions using advanced classification models, imbalance handling techniques, and real-time analytics dashboards.
+A production-oriented fraud detection system designed to identify suspicious financial transactions using machine learning and real-world banking datasets. The project is built using Python, pandas, scikit-learn, XGBoost, SMOTE, Streamlit, and MySQL, with a focus on scalable preprocessing pipelines, model evaluation, and interactive fraud analysis.
 
-Built using Python, pandas, scikit-learn, XGBoost, SMOTE, Streamlit, and MySQL, this system analyzes transaction behavior to identify suspicious activity with high precision and recall.
+The system is designed to simulate practical fraud detection workflows used in modern financial systems by combining data preprocessing, imbalance handling, machine learning classification, and real-time prediction interfaces within a modular architecture.
 
----
+The project aims to support experimentation with multiple fraud detection models while providing an expandable foundation for future enterprise-grade fraud monitoring systems and intelligent financial analytics.
 
-# 🚧 Development Status
+> ⚠️ **Project Status:** The Bank Transaction Fraud Detection System is currently under active development and is not yet in its final production stage. Core preprocessing pipelines, dataset handling, dashboard foundations, and initial fraud prediction workflows are implemented, while advanced model optimization, real-time transaction monitoring, database integrations, and intelligent fraud analysis features are still being expanded and refined.
 
-> ⚠️ **Project Status:** This project is currently under active development and is **not yet in its final production stage**.
+## Technologies Used
 
-The current implementation focuses on:
+* Python
+* pandas
+* scikit-learn
+* XGBoost
+* SMOTE
+* Streamlit
+* MySQL
 
-* fraud detection pipeline architecture
-* preprocessing workflows
-* imbalance handling systems
-* baseline and ensemble ML models
-* analytics dashboard infrastructure
+## Phase 1: Preprocessing
 
-Several advanced capabilities are still being developed, optimized, and integrated for real-world scalability and production deployment.
+Place the Kaggle fraud dataset CSV at:
 
----
+```text id="ztbx6f"
+data/raw/creditcard.csv
+```
 
-# ✅ Currently Implemented
+The default Kaggle Credit Card Fraud dataset uses `Class` as the target column:
 
-* Data preprocessing pipeline
-* Missing value handling
-* Duplicate removal
-* Feature engineering
-* Stratified train-test splitting
-* SMOTE integration
-* Logistic Regression baseline
-* Random Forest integration
-* XGBoost training pipeline
-* Streamlit dashboard foundation
-* Fraud prediction workflow
-* Evaluation metrics system
-
----
-
-# 🚧 In Progress
-
-* Hyperparameter tuning
-* Advanced feature engineering
-* Real-time transaction prediction
-* Interactive analytics visualizations
-* Model comparison dashboard
-* Automated anomaly detection
-* Secure authentication system
-* API integration layer
-
----
-
-# 🔮 Planned Features
-
-* Deep learning fraud detection
-* Graph-based anomaly detection
-* Kafka streaming pipelines
-* FastAPI deployment
-* Docker containerization
-* Cloud deployment (AWS/GCP/Azure)
-* Real-time fraud monitoring
-* Explainable AI (XAI) dashboards
-* Ensemble model optimization
-* Fraud risk scoring engine
-
----
-
-# 🏗️ Project Vision
-
-The long-term goal of this project is to evolve into a scalable intelligent fraud analytics platform capable of:
-
-* processing large-scale transaction streams,
-* detecting suspicious behavior in real time,
-* minimizing false positives,
-* improving financial security,
-* and supporting production-grade fraud prevention workflows used in modern fintech systems.
-
-
-# 🚀 Features
-
-## 📊 Data Processing & Analysis
-- Automated preprocessing pipeline
-- Missing value handling
-- Duplicate transaction removal
-- Feature engineering
-- One-hot encoding
-- Dataset statistics generation
-- Fraud distribution analysis
-
-## 🤖 Machine Learning
-- Logistic Regression
-- Random Forest Classifier
-- XGBoost Classifier
-- Model comparison framework
-
-## ⚖️ Imbalanced Dataset Handling
-- SMOTE oversampling
-- Stratified train-test splitting
-- Class distribution monitoring
-- Precision-focused optimization
-
-## 📈 Evaluation Metrics
-- Precision
-- Recall
-- F1-score
-- ROC-AUC
-- Confusion Matrix
-- Classification Reports
-
-## 🌐 Dashboard & Deployment
-- Interactive Streamlit dashboard
-- Real-time fraud prediction
-- Transaction analysis interface
-- Secure login system
-- Custom dataset support
-
----
-
-# 🧠 Problem Statement
-
-Financial fraud is one of the largest challenges faced by digital banking platforms today.
-
-Fraudulent transactions are extremely rare compared to legitimate transactions, making fraud detection a highly imbalanced classification problem.
-
-The goal of this project is to build an intelligent system capable of:
-- learning transaction patterns
-- identifying anomalies
-- predicting fraudulent activities accurately
-
----
-
-# 🛠️ Tech Stack
-
-## Languages
-- Python
-- SQL
-
-## Libraries & Frameworks
-- pandas
-- numpy
-- scikit-learn
-- XGBoost
-- imbalanced-learn (SMOTE)
-- matplotlib
-- seaborn
-- Streamlit
-- joblib
-
-## Database
-- MySQL
-
----
-
-# 📂 Project Structure
-
-fraud-detector/
-│
-├── app/
-├── data/
-├── models/
-├── notebooks/
-├── src/
-├── requirements.txt
-├── README.md
-└── main.py
-
----
-
-# ⚙️ Installation Guide
-
-## Clone Repository
-
-git clone https://github.com/your-username/fraud-detector.git
-
-## Create Virtual Environment
-
-python -m venv venv
-
-## Install Dependencies
-
-pip install -r requirements.txt
-
----
-
-# ▶️ Running the Project
+* `0` → Legitimate transaction
+* `1` → Fraudulent transaction
 
 ## Run Preprocessing
 
+```bash id="q8rjlwm"
 python main.py
+```
 
-## Run Streamlit Dashboard
+## Run the Streamlit Dashboard
 
+```bash id="8tr4fo"
 streamlit run app/streamlit_app.py
+```
 
----
+If port `8501` is already in use:
 
-# ⚠️ Why Accuracy Alone Is Misleading
+```bash id="a9x7uv"
+streamlit run app/streamlit_app.py --server.port 8502
+```
 
-Fraud detection datasets are highly imbalanced.
+## Default Dashboard Login
 
-A model predicting every transaction as legitimate may still achieve very high accuracy.
+```text id="t4gexs"
+User ID: admin
+Password: admin123
+```
 
-Therefore, this project prioritizes:
-- Recall
-- Precision
-- F1-score
-- ROC-AUC
+The dashboard includes a **Predict Fraud** section where users can enter transaction details and check whether the trained model predicts fraudulent activity.
 
----
+You can also provide a custom dataset path and target column:
 
-# 📈 Model Evaluation
+```bash id="m7rq8l"
+python main.py --input-path data/raw/your_dataset.csv --target-column Class
+```
 
-Metrics used:
-- Precision
-- Recall
-- F1-score
-- ROC-AUC
-- Confusion Matrix
+## Processed Outputs
 
----
+Processed datasets and metadata are saved to:
 
-# 📌 Future Improvements
+```text id="4kpvru"
+data/processed/
+|-- X_train.csv
+|-- X_test.csv
+|-- y_train.csv
+|-- y_test.csv
+`-- metadata.json
+```
 
-- Deep learning fraud detection
-- Graph-based anomaly detection
-- Docker deployment
-- Cloud deployment
-- Real-time fraud monitoring
+## Preprocessing Pipeline
 
----
+The preprocessing phase currently performs:
 
-# 👨‍💻 Author
+* Loading the raw transaction dataset
+* Detecting and validating the fraud target column
+* Printing dataset statistics and fraud distribution
+* Removing duplicate records
+* Filling missing numeric values using median imputation
+* Filling missing categorical values using mode imputation
+* One-hot encoding categorical feature columns
+* Stratified train-test dataset splitting
+* Saving processed datasets and metadata for training workflows
 
-Developed by Sahasrad S Nair
+## Planned Next Phases
+
+1. Exploratory Data Analysis (EDA) using Jupyter notebooks
+2. SMOTE balancing applied only on training data
+3. Training models using:
+
+   * Logistic Regression
+   * Random Forest
+   * XGBoost
+4. Model evaluation using:
+
+   * Precision
+   * Recall
+   * F1-Score
+   * ROC-AUC
+   * Confusion Matrix
+5. Model persistence using joblib
+6. Advanced Streamlit fraud monitoring dashboard
+7. Real-time fraud scoring and transaction analysis
+8. Database integration and intelligent fraud reporting
