@@ -5,9 +5,6 @@ Production-oriented Machine Learning project for detecting fraudulent banking an
 Built using Python, pandas, scikit-learn, XGBoost, SMOTE, Streamlit, and MySQL, this system analyzes transaction behavior to identify suspicious activity with high precision and recall.
 
 ---
-Add this section after the introduction or before “Features”:
-
----
 
 # 🚧 Development Status
 
