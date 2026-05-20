@@ -1,0 +1,56 @@
+{
+  "best_model": "random_forest",
+  "best_model_path": "C:\\Users\\chumm\\Documents\\Bank\\fraud-detector\\models\\random_forest.joblib",
+  "default_model_path": "C:\\Users\\chumm\\Documents\\Bank\\fraud-detector\\models\\fraud_model.joblib",
+  "metrics_path": "C:\\Users\\chumm\\Documents\\Bank\\fraud-detector\\reports\\model_comparison.csv",
+  "balance_metadata": {
+    "method": "smote",
+    "before": [
+      {
+        "class": 0,
+        "count": 69,
+        "percentage": 86.25
+      },
+      {
+        "class": 1,
+        "count": 11,
+        "percentage": 13.75
+      }
+    ],
+    "after": [
+      {
+        "class": 0,
+        "count": 69,
+        "percentage": 50.0
+      },
+      {
+        "class": 1,
+        "count": 69,
+        "percentage": 50.0
+      }
+    ]
+  },
+  "models": {
+    "logistic_regression": {
+      "precision": 0.15789473684210525,
+      "recall": 1.0,
+      "f1_score": 0.2727272727272727,
+      "roc_auc": 0.6078431372549019,
+      "threshold": 0.5
+    },
+    "random_forest": {
+      "precision": 0.3333333333333333,
+      "recall": 0.3333333333333333,
+      "f1_score": 0.3333333333333333,
+      "roc_auc": 0.6078431372549019,
+      "threshold": 0.5
+    },
+    "xgboost": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "roc_auc": 0.6862745098039216,
+      "threshold": 0.5
+    }
+  }
+}
